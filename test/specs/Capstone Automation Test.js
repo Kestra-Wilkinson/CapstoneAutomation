@@ -17,7 +17,7 @@ describe('REI Website 10 Actions Test', () => {
     }
 
     // 4. Click on a product
-    const product = await $('a[data-testid="product-card-link"]');
+    const product = await $('li[data-testid="product-card"] a[data-testid="product-card-link"]');
     if (await product.isDisplayed()) {
       await product.click();
     }
@@ -40,9 +40,7 @@ describe('REI Website 10 Actions Test', () => {
       await sizeOption.click();
 
       const firstSize = await $('ul[role="listbox"] li button');
-      if (await firstSize.isDisplayed()) {
-        await firstSize.click();
-      }
+      await firstSize.click();
     }
 
     const addToCart = await $('button[data-testid="add-to-cart-button"]');
@@ -57,7 +55,7 @@ describe('REI Website 10 Actions Test', () => {
     await browser.execute(() => window.scrollBy(0, -1000));
 
     // 10. Return to homepage
-    const homeLogo = await $('a[data-testid="rei-logo"]');
+    const homeLogo = await $('a[data-testid="logo"]');
     if (await homeLogo.isDisplayed()) {
       await homeLogo.click();
     }
