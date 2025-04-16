@@ -61,3 +61,16 @@ describe('REI Website 10 Actions Test', () => {
     }
   });
 });
+
+
+describe ('REI Website searchBar Functionality Test',  () => {
+  it('should perform a searchbar Functionality test', async () => {
+    await browser.url('https://www.rei.com');
+
+    const searchInput = await $('.search__input');
+    await searchInput.setValue('hiking boots');
+    await browser.keys('Enter');
+
+
+     });
+});
