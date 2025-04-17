@@ -70,6 +70,10 @@ describe ('REI Website searchBar Functionality Test',  () => {
     const searchInput = await $('.search__input');
     await searchInput.setValue('hiking boots');
     await browser.keys('Enter');
+    await browser.pause(3000);
+
+     });
+});
 
 
 describe('REI Website searchBar Functionality Test',  () => {
