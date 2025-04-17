@@ -72,5 +72,8 @@ describe ('REI Website searchBar Functionality Test',  () => {
     await browser.keys('Enter');
 
 
-     });
+describe('REI Website searchBar Functionality Test',  () => {
+  it('should perform a searchbar Functionality test', async () => {
+
+  });
 });
